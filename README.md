@@ -1,2 +1,1 @@
-# Snapshot Testing# RR-SNAPSHOT-TESTING
 # RR-SNAPSHOT-TESTING
