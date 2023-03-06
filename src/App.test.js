@@ -1,8 +1,11 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import App from "./App";
+//install "npm install --save-dev react-test-renderer"
+// import JEST snapshot
+import renderer from "react-test-renderer";
+// run "npm test"
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+
+test('renders a snapshot', () => {
+  const tree = renderer.create(<App/>).toJSON()
+  expect(tree).toMatchSnapshot()
+})
