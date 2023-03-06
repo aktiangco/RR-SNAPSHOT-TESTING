@@ -18,10 +18,10 @@ Disadvantages:
 
 ## Write first snapshot
 
-test('renders a snapshot', () => {
+`test('renders a snapshot', () => {
     const tree = renderer.create(<App/>).toJSON()
     expect(tree).toMatchSnapshot()
-  })
+  })`
 
 - We set a variable (usually called 'tree') equal to renderer.create. We pass a React element in JSX form, App, to renderer.create. renderer.create renders the element and creates a special output that has a toJSON method.
 - The call toJSON is important because it turns the component representation into JSON. This makes it easier to save as a snapshot and compare to other snapshots. You can see what the output looks like by adding a console.log(tree) after renderer.create. Remove the toJSON call to see what the object looks like without it. Make sure to add the toJSON call back before moving to the next step.
